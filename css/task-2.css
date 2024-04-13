@@ -1,0 +1,8 @@
+.gallery {
+    list-style-type: none;
+}
+
+.gallery-image {
+    max-width: 320px;
+    height: auto;
+}
