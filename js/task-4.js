@@ -1,16 +1,16 @@
 const form = document.querySelector('form');
-const emailInput = document.querySelector('input[name="email"]');
-const passwordInput = document.querySelector('input[name="password"]');
+const emailName = document.querySelector('input[name="email"]');
+const passwordName = document.querySelector('input[name="password"]');
 
 form.addEventListener('submit', event => {
   event.preventDefault();
 
-  if (emailInput.value.trim() === '' || passwordInput.value.trim() === '') {
+  if (emailName.value.trim() === '' || passwordName.value.trim() === '') {
     alert('All form fields must be filled in');
   } else {
     const user = {
-      email: emailInput.value.trim(),
-      password: passwordInput.value.trim(),
+      email: emailName.value.trim(),
+      password: passwordName.value.trim(),
     };
 
     console.log(user);
