@@ -18,15 +18,21 @@ createBtn.addEventListener('click', event => {
 });
 
 function createBoxes(amount) {
-  let htmlBoxes = '';
+  const fragment = document.createDocumentFragment();
   let size = 30;
 
   for (let index = 0; index < amount; index++) {
-    htmlBoxes += `<div style="background-color: ${getRandomHexColor()}; width: ${size}px; height: ${size}px;"></div>`;
+    const div = document.createElement('div');
+    div.style.backgroundColor = getRandomHexColor();
+    div.style.width = `${size}px`;
+    div.style.height = `${size}px`;
+
+    fragment.appendChild(div);
 
     size += 10;
   }
-  divBoxes.innerHTML = htmlBoxes;
+  divBoxes.innerHTML = '';
+  divBoxes.appendChild(fragment);
 }
 
 destroyBtn.addEventListener('click', destroyBoxes);
